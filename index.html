@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Lightbox</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+  
+</head>
+
+<body>
+  <div id="app">
+  <title-block :article="getArticle"></title-block>
+  <button @click="prev">Nazad</button>
+  <button @click="next">Naprijed</button>
+  <p>{{getId}}</p>
+  <single-comment v-for="(comment, index) in getComments" :key="index" :comment="comment"></single-commment>
+  <p>{{getComments[0]}}</p>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+<script src='https://unpkg.com/vuex'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
